@@ -74,6 +74,15 @@ p {
   border-radius: 1rem;
   justify-content: flex-end;
 }
+.article-feature {
+  width: 40vw;
+  max-width: 36rem;
+  min-height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
 .passport {
   width: 140px;
   height: 140px;
@@ -87,7 +96,8 @@ h1 {
   font-weight: 400;
   font-size: 3rem;
   vertical-align: middle;
-  color: var(--on-bg2);  
+  color: var(--on-bg2); 
+  text-transform: uppercase; 
 }
 h2 {
   color: var(--on-bg2);
@@ -189,7 +199,6 @@ svg {
   height: 3rem;
 }
 .button {
-  position: relative;
   display: inline-block;
   background: var(--highlight);
   color: var(--bg1);
@@ -197,12 +206,11 @@ svg {
   font-size: 1rem;
   border-radius: 1rem;
   height: 2rem;
-  vertical-align: top;
-  line-height: 1rem;
-  width: 4rem;
+  line-height: 2rem;
   text-transform: uppercase;
-  top: .2rem;
-  margin-left: .5rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 .submit-button {
   position: relative;
@@ -223,11 +231,7 @@ svg {
 .button:hover, .submit-button:hover {
   background: var(--on-bg1);
 }
-.button-label {
-  position: absolute;
-  top: .5rem;
-  left: .7rem;
-}
+
 #contact-page main {
   max-width: 36rem;
 }
@@ -297,16 +301,20 @@ form span {
 	margin: 0 auto;
 	display: block;
   }
+  .article-feature {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 24rem;
+    margin: 0 auto;
+    display: block;    
+    margin-bottom: 1rem; 
+  }
 }
-@media (max-width: 1000px) {
-	#hide {
+@media (max-width: 850px) {
+    h2 {
 	  display: none;
 	}
 }
-@media (max-width: 500px) {
-	h2 {
-	  display: none;
-	}
- }
 
 

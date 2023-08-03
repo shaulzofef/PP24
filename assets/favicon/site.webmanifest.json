@@ -1,0 +1,11 @@
+{
+    "name": "PowerPage",
+    "short_name": "PowerPage",
+    "icons": [{
+        "src": "google-touch-icon.png",
+        "sizes": "512x512"
+    }],
+    "theme_color": "#003e5f",
+    "background_color": "#003e5f",
+    "display": "fullscreen"
+}

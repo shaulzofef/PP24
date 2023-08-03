@@ -1,11 +1,11 @@
 	<?php wp_footer();?>
 	
 	<footer>
-	  <nav>
+	  <!--<nav>
 		<a href="" class="load">Load More Posts</a>
-	  </nav>
+	  </nav>-->
 		<div id="credits">
-		© 2023 O'Grady's PowerPage |
+		© <script>document.write( new Date().getFullYear() );</script> O'Grady's PowerPage |
 		Powered by WordPress<br>
 	  
 		<!-- SVGS -->
