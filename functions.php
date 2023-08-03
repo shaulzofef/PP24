@@ -37,7 +37,7 @@ add_action('wp_enqueue_scripts', 'sz_register_scripts');
 add_filter('the_content', 'put_thumbnail_in_posting');
 function put_thumbnail_in_posting($content) {
 global $post;
-if ( has_post_thumbnail() && ( $post->post_type == 'post' ) ) { the_post_thumbnail( 'medium', array( 'class' => 'article-feature' ) ); }
+if ( has_post_thumbnail() && ( $post->post_type == 'single' ) ) { the_post_thumbnail( 'medium', array( 'class' => 'article-feature' ) ); }
 return $content;
 }
 ?>
