@@ -6,9 +6,9 @@
   <meta name="description" content="Daily Apple news and tips since 1995">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <meta name="theme-color" content="#003e5f">
+  <meta name="theme-color" content="#011e2d">
   <link rel="icon" href="/wp-content/themes/PP24/assets//wp-content/themes/PP24/assets/favicon/favicon.svg">
-  <link rel="mask-icon" href="/wp-content/themes/PP24/assets/favicon/mask-icon.svg" color="#003e5f">
+  <link rel="mask-icon" href="/wp-content/themes/PP24/assets/favicon/mask-icon.svg" color="#011e2d">
   <link rel="apple-touch-icon" href="/wp-content/themes/PP24/assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/wp-content/themes/PP24/assets/favicon/site.webmanifest.json">
   
