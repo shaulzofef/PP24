@@ -11,27 +11,21 @@
 	
 	$args = array(
 		'posts_per_page' => 5,
-		'order' => 'DESC',
+		'post__not_in' => array($current_post_id),
+		'meta_query' => array(
+			array(
+				'key' => 'read_status',
+				'value' => 'read',
+				'compare' => 'NOT EXISTS', // Exclude read posts
+			),
+		),
 		'orderby' => 'date',
+		'order' => 'DESC',
 	);
-	
-	// Get an array of IDs for read posts
-	$read_post_ids = array();
-	$read_posts_query = new WP_Query(array(
-		'meta_key' => 'read_status',
-		'meta_value' => 'read',
-		'fields' => 'ids',
-	));
-	if ($read_posts_query->have_posts()) {
-		$read_post_ids = $read_posts_query->posts;
-	}
-	
-	// Exclude current post and read posts from the query
-	$args['post__not_in'] = array_merge(array($current_post_id), $read_post_ids);
 	
 	$postslist = get_posts($args);
 	
-	foreach ($postslist as $post) :  setup_postdata($post);
+	foreach ($postslist as $post) : setup_postdata($post);
 		?>
 		<div>
 			<a href="<?php the_permalink() ?>" class="recents-item">
