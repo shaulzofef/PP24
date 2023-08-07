@@ -2,5 +2,5 @@
 
 <?php the_content(); ?>
 <a class="button" href="<?php echo home_url(); ?>">
-	<span class="button-label">Back Home</span>
+	Home
 </a>

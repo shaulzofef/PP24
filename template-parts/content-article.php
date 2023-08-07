@@ -7,26 +7,9 @@
 <div class="seperator"></div>
 <div id="recents">
 	<?php
-	$current_post_id = get_the_ID();
-	
-	$args = array(
-		'posts_per_page' => 5,
-		'post__not_in' => array($current_post_id),
-		'meta_query' => array(
-			array(
-				'key' => 'read_status',
-				'value' => 'read',
-				'compare' => 'NOT EXISTS', // Exclude read posts
-			),
-		),
-		'orderby' => 'date',
-		'order' => 'DESC',
-	);
-	
-	$postslist = get_posts($args);
-	
-	foreach ($postslist as $post) : setup_postdata($post);
-		?>
+	$args = array( 'numberposts' => 4, 'order'=> 'ASC', 'orderby' => 'title', 'post__not_in' => array( get_the_ID() ));
+	$postslist = get_posts( $args );
+	foreach ($postslist as $post) :  setup_postdata($post); ?> 
 		<div>
 			<a href="<?php the_permalink() ?>" class="recents-item">
 				<div class="recents-title">
@@ -35,9 +18,8 @@
 				<img src="<?php the_post_thumbnail_url(); ?>" class="thumbnail" alt="Feature Image">
 			</a>
 		</div>
-	<?php endforeach;
-	wp_reset_postdata(); ?>
+	<?php endforeach; ?>
 </div>
 <a class="button home" onclick="history.back(-1)">
-	Back Home
+	Back
 </a>

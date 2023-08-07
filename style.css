@@ -12,7 +12,7 @@ Author: Shaul Zofef
    --light-blue: #d2f2ff;
    --high-blue: #61d1ff;
    --mid-blue: #0086be;
-   --blue: #003e5f;
+   --blue: #00314b;
    --dark-blue: #011e2d;
    --yellow: #FFDD00;
    
@@ -28,7 +28,7 @@ Author: Shaul Zofef
    --bg1: var(--blue);
    --on-bg1: var(--light-blue);
    --bg2: var(--dark-blue);
-   --on-bg2: var(--high-blue);
+   --on-bg2: var(--mid-blue);
    --highlight: var(--yellow);
   }
 }
@@ -52,10 +52,6 @@ a#home {
 a:hover h3 {
   color: var(--highlight);
 }
-.flex-container {
-  display: flex;
-  gap: 30px;
-}
 p {
   font-family: 'Crimson Pro', serif;
   margin: 1rem auto;
@@ -65,16 +61,6 @@ p {
   font-size: clamp(1.5rem, 1.3rem + 1vw, 1.7rem);
   justify-content: flex-start;
 }
-.feature {
-  width: 40vw;
-  max-width: 36rem;
-  height: 100%;
-  min-height: 18rem;
-  object-fit: cover;
-  border-radius: 1rem;
-  justify-content: flex-end;
-}
-
 h1 {
   display: inline;
   font-family: 'Teko', sans-serif;
@@ -105,9 +91,11 @@ h3 {
 }
 h4 {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--highlight);
-  margin: .5rem 0 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
 }
 header {
   width: 100%;
@@ -125,12 +113,6 @@ section {
   margin: 1rem auto;
   padding-top: .2rem;
 }
-.seperator {
-  background: linear-gradient(90deg, transparent 0%, var(--high-blue) 50%, transparent 100% );
-  width: 90%;
-  margin: 2rem auto 0;
-  height: 1px;
-}
 footer {
   margin: 2rem auto;
   text-align: center;
@@ -145,21 +127,35 @@ nav a {
   text-align: center;
   margin: 0 auto 2rem;
 }
-#credits {
-  padding: 3.3rem 1rem 0;
-  background: var(--bg2);
-  color: var(--on-bg2);
-  text-align: center;
+.flex-container {
+  display: flex;
+  gap: 30px;
+}
+.feature {
+  width: 40vw;
+  max-width: 36rem;
+  height: 100%;
+  min-height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  justify-content: flex-end;
+}
+.seperator {
+  background: linear-gradient(90deg, transparent 0%, var(--high-blue) 50%, transparent 100% );
+  width: 90%;
+  margin: 2rem auto 0;
+  height: 1px;
 }
 .details {
-  color: var(--highlight);
+  color: var(--mid-blue);
   font-size: 1.1rem;
   text-align: center;
   margin: 1rem 0;
 }
 
+/*-- icons --*/
 #date path, #author path, #arrow path, #down-arrow path, #home-icon path {
-  fill: var(--highlight);
+  fill: var(--mid-blue);
 }
 .nav-home {
   margin: 1rem auto;
@@ -183,6 +179,8 @@ svg {
   width: 3rem;
   height: 3rem;
 }
+
+/*-- Buttons --*/
 .button {
   display: block;
   background: var(--highlight);
@@ -193,26 +191,20 @@ svg {
   height: 2rem;
   line-height: 2rem;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 2rem;
   width: min-content;
   text-decoration: none;
 }
-.submit-button {
+.archive .button {
+  margin: 0;
+}
+.submit {
   position: relative;
-  display: inline-block;
-  background: var(--highlight);
-  color: var(--bg1);
-  font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
-  border-radius: 1rem;
-  height: 2rem;
   vertical-align: top;
-  line-height: 1rem;
-  width: 5rem;
-  text-transform: uppercase;
   top: .2rem;
-  margin-left: .5rem;
+  margin: 1rem auto;
+  cursor: pointer;
 }
 .button:hover, .submit-button:hover {
   background: var(--on-bg1);
@@ -221,6 +213,7 @@ svg {
   margin: 2rem auto 0;
   display: block;
   width: min-content;
+  cursor: pointer;
 }
 /*-- Recents --*/
 #recents {
@@ -246,7 +239,11 @@ svg {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;  
 }
+#recents :hover {
+  color: var(--highlight);
+}
 
+/*-- Images --*/
 .thumbnail {
   object-fit: cover;
   width: 100%;
@@ -267,14 +264,9 @@ svg {
   height: 140px;
   float: right;
   border-radius: 1rem;
-  margin: 0 0 1rem 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
-#contact-page main {
-  max-width: 36rem;
-}
-#contact-page section {
-  margin: 2rem 0;
-}
+/*-- Forms --*/
 form {
   margin: 0 auto;
   text-align: center;
@@ -294,31 +286,39 @@ input {
 }
 textarea {
    border-radius: .7rem;
-	border: none;
+	 border: none;
    margin: .5rem 0;
-   padding: .5rem;
-   width: 90%;
-   max-width: 90%; 
+   width: 100%;
 }
 form span {
   color: var(--highlight);
   margin-left: .5rem;
 }
-.center, #about-page h3, #about-page h4 {
-  text-align: center;
+
+/*-- Pages --*/
+#about-page section, #advertise-page section, #contact-page section {
+  max-width: 40rem;
 }
- #contact-page h4, #advertise-page h4 {
-   margin: 1rem 0 .5rem;
- }
-#about-page p, #advertise-page p {
-  font-family: 'Gantari', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  margin: 1rem auto 0;
-  text-indent: 20px;
- }
-#about-page section, #advertise-page section {
-  max-width: 36rem;
+#advertise-page ul{
+  list-style: none;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  color: var(--highlight);
+}
+#advertise-page li {
+  display: inline;
+}
+#advertise-page li:after {
+  content: " | ";
+}
+#advertise-page :last-child:after {
+  content: "";
+}
+#contact-page {
+  max-width: 40rem;
+  margin: 0 auto;
 }
 #contact-page p {
   font-family: 'Gantari', sans-serif;
@@ -326,6 +326,12 @@ form span {
   line-height: 1rem;
   margin: 0;
 }
+#contact-page h4, form {
+  text-align: left;
+  font-size: 1rem;
+}
+
+/*-- Pagination --*/
 .nav-links {
   margin: 0 auto;
   text-align: center;
@@ -349,6 +355,9 @@ form span {
   width: min-content;
   text-transform: uppercase;
 }
+.page-numbers:hover {
+  background: var(--on-bg1);  
+}
 .next, .prev {
   padding: 0 1rem;
 }
@@ -357,6 +366,11 @@ form span {
   background: var(--on-bg2); 
   color: var(--bg1);
 }
+.current:hover {
+  background: var(--on-bg2);
+}
+
+/*-- Media Queries --*/
 @media (max-width: 800px) {
   .flex-container {
 	flex-direction: column;
