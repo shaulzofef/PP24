@@ -409,7 +409,7 @@ form span {
   }
   .thumbnail {
     max-width: 50vw;
-    width: 12rem;
+    width: clamp(6rem, 2rem + 20vw, 12rem);
   }
   .details {
     margin-bottom: 0; 
