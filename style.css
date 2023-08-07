@@ -408,7 +408,8 @@ form span {
     text-align: left;
   }
   .thumbnail {
-    width: 12rem;
+    max-width: 12rem;
+    width: 50vw;
   }
   .details {
     margin-bottom: 0; 
