@@ -7,9 +7,21 @@
 <div class="seperator"></div>
 <div id="recents">
 	<?php
+	$current_post_id = get_the_ID();
 	$args = array( 'numberposts' => 5, 'order'=> 'ASC', 'orderby' => 'title' );
 	$postslist = get_posts( $args );
-	foreach ($postslist as $post) :  setup_postdata($post); ?> 
+	foreach ($postslist as $post) :  setup_postdata($post);
+
+		$read_status = get_post_meta( $post->ID, 'read_status', true );
+	
+		if ( $read_status === 'read' ) {
+			continue;
+		}
+	
+		if ( $post->ID === $current_post_id ) {
+			continue;
+		}
+		?>
 		<div>
 			<a href="<?php the_permalink() ?>" class="recents-item">
 				<div class="recents-title">
