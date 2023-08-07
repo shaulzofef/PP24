@@ -74,22 +74,7 @@ p {
   border-radius: 1rem;
   justify-content: flex-end;
 }
-.article-feature {
-  width: 40vw;
-  max-width: 36rem;
-  min-height: 18rem;
-  object-fit: cover;
-  border-radius: 1rem;
-  float: right;
-  margin: 0 0 1rem 1rem;
-}
-.passport {
-  width: 140px;
-  height: 140px;
-  float: right;
-  border-radius: 1rem;
-  margin: 0 0 1rem 1rem;
-}
+
 h1 {
   display: inline;
   font-family: 'Teko', sans-serif;
@@ -115,8 +100,8 @@ h3 {
   line-height: 2rem;
   line-height: clamp(2rem, 1.55rem + 2.25vw, 2.9rem);
   font-family: 'Outfit', sans-serif;
-  text-align: left;
-  margin: .5rem auto 0;
+  text-align: center;
+  margin: 2rem auto 0;
 }
 h4 {
   font-family: 'Outfit', sans-serif;
@@ -169,7 +154,7 @@ nav a {
 .details {
   color: var(--highlight);
   font-size: 1.1rem;
-  text-align: right;
+  text-align: center;
   margin: 1rem 0;
 }
 
@@ -199,18 +184,19 @@ svg {
   height: 3rem;
 }
 .button {
-  display: inline-block;
+  display: block;
   background: var(--highlight);
   color: var(--bg1);
   font-family: 'Outfit', sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
   border-radius: 1rem;
   height: 2rem;
   line-height: 2rem;
   text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin: 0;
+  padding: 0 2rem;
+  width: min-content;
+  text-decoration: none;
 }
 .submit-button {
   position: relative;
@@ -231,7 +217,58 @@ svg {
 .button:hover, .submit-button:hover {
   background: var(--on-bg1);
 }
+.home {
+  margin: 2rem auto 0;
+  display: block;
+  width: min-content;
+}
+/*-- Recents --*/
+#recents {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#recents a {
+  font-size: 1.2rem;
+  text-align: center;
+}
+#recents > div {
+  flex: 1;
+  min-width: 0;
+}
+.recents-title {
+  height: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Outfit', sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
 
+.thumbnail {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 1rem;  
+  height: 8rem;
+}
+.article-feature {
+  width: 40vw;
+  max-width: 36rem;
+  min-height: 18rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+.passport {
+  width: 140px;
+  height: 140px;
+  float: right;
+  border-radius: 1rem;
+  margin: 0 0 1rem 1rem;
+}
 #contact-page main {
   max-width: 36rem;
 }
@@ -289,6 +326,37 @@ form span {
   line-height: 1rem;
   margin: 0;
 }
+.nav-links {
+  margin: 0 auto;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+.nav-links > * {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-style: normal;
+}
+.nav-links > a {
+  text-decoration: none;
+  color: var(--bg1);  
+}
+.page-numbers {
+  background: var(--highlight);
+  margin: 0 .2rem;
+  padding: 0 .2rem;
+  border-radius: 1rem;
+  min-width: 2rem;
+  width: min-content;
+  text-transform: uppercase;
+}
+.next, .prev {
+  padding: 0 1rem;
+}
+.current {
+  text-align: center;
+  background: var(--on-bg2); 
+  color: var(--bg1);
+}
 @media (max-width: 800px) {
   .flex-container {
 	flex-direction: column;
@@ -310,11 +378,28 @@ form span {
     display: block;    
     margin-bottom: 1rem; 
   }
+  h2 {
+    display: none;
+  }
+  #recents {
+    flex-flow: column;
+  }
+  .recents-item {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
+  .recents-title {
+    flex: 3;
+    text-align: left;
+  }
+  .thumbnail {
+    width: 12rem;
+  }
+  .details {
+    margin-bottom: 0; 
+  }
+  .button {
+    margin: 0 auto;
+  }
 }
-@media (max-width: 850px) {
-    h2 {
-	  display: none;
-	}
-}
-
-
