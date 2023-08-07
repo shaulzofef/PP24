@@ -11,13 +11,13 @@
 	$args = array( 'numberposts' => 5, 'order'=> 'ASC', 'orderby' => 'title' );
 	$postslist = get_posts( $args );
 	foreach ($postslist as $post) :  setup_postdata($post);
-
+		// Check if the post has been marked as read
 		$read_status = get_post_meta( $post->ID, 'read_status', true );
-	
+		// Skip posts that have been marked as read
 		if ( $read_status === 'read' ) {
 			continue;
 		}
-	
+		// Check if the post is the current post, and skip it
 		if ( $post->ID === $current_post_id ) {
 			continue;
 		}
