@@ -3,23 +3,34 @@
   <svg><use xlink:href="#author"></use></svg><?php echo get_the_author(); ?>
   <svg><use xlink:href="#date"></use></svg>&nbsp;<?php the_time('F jS') ?>
 </div>
-<?php the_content(); ?>
+<div class="single-content">
+	<?php the_content(); ?>
+</div>
 <div class="seperator"></div>
 <div id="recents">
 	<?php
-	$args = array( 'numberposts' => 4, 'order'=> 'ASC', 'orderby' => 'title', 'post__not_in' => array( get_the_ID() ));
-	$postslist = get_posts( $args );
-	foreach ($postslist as $post) :  setup_postdata($post); ?> 
-		<div>
-			<a href="<?php the_permalink() ?>" class="recents-item">
-				<div class="recents-title">
-					<?php the_title(); ?>
-				</div>
-				<img src="<?php the_post_thumbnail_url(); ?>" class="thumbnail" alt="Feature Image">
-			</a>
+	$next_post = get_next_post();
+	$prev_post = get_previous_post();
+	 
+	if ( $next_post || $prev_post ) : ?>
+		<div class="next">
+			<?php if ( ! empty( $next_post ) ) : ?>
+				<a href="<?php echo get_permalink( $next_post ); ?>">
+					<?php echo get_the_post_thumbnail( $next_post); ?>
+					<span class="recent-title"><?php echo get_the_title( $next_post ); ?></span>
+				</a>
+			<?php endif; ?>
 		</div>
-	<?php endforeach; ?>
+		<div class="previous">
+			<?php if ( ! empty( $prev_post ) ) : ?>
+				<a href="<?php echo get_permalink( $prev_post ); ?>">
+					<?php echo get_the_post_thumbnail( $prev_post); ?>
+					<span class="recent-title"><?php echo get_the_title( $prev_post ); ?></span>
+				</a>
+			<?php endif; ?>
+		</div>
+	<?php endif; ?>
 </div>
 <a class="button home" onclick="history.back(-1)">
-	Back
+	Home
 </a>

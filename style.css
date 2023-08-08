@@ -18,8 +18,8 @@ Author: Shaul Zofef
    
    --bg1: var(--light-blue);
    --on-bg1: var(--blue);
-   --bg2: var(--blue);
-   --on-bg2: var(--high-blue);
+   --bg2: var(--mid-blue);
+   --on-bg2: var(--light-blue);
    --highlight: var(--mid-blue);
    }
    
@@ -111,12 +111,19 @@ main {
 }
 section {
   margin: 1rem auto;
-  padding-top: .2rem;
+}
+section#single {
+  max-width: 54rem;
+}
+.single-content img{
+  max-width: 24rem;
 }
 footer {
   margin: 2rem auto;
+  padding: 0 2rem;
   text-align: center;
   margin: 0;
+  color: var(--on-bg2);
 }
 nav a {
   display: block;
@@ -173,7 +180,7 @@ nav a {
   fill: var(--dark-blue);
 }
 .bolt {
-  fill: var(--yellow);
+  fill: var(--on-bg2);
 }
 svg {
   width: 3rem;
@@ -215,22 +222,26 @@ svg {
   width: min-content;
   cursor: pointer;
 }
+
 /*-- Recents --*/
 #recents {
   display: flex;
-  flex-flow: row wrap;
   gap: 1rem;
+  justify-content: space-between;
   margin-top: 1rem;
-}
-#recents a {
   font-size: 1.2rem;
   text-align: center;
 }
-#recents > div {
+#recents div {
   flex: 1;
-  min-width: 0;
+  max-width: 20rem;
 }
-.recents-title {
+#recents img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+.recent-title {
   height: 5rem;
   margin-bottom: 1rem;
   font-family: 'Outfit', sans-serif;
@@ -244,12 +255,7 @@ svg {
 }
 
 /*-- Images --*/
-.thumbnail {
-  object-fit: cover;
-  width: 100%;
-  border-radius: 1rem;  
-  height: 8rem;
-}
+
 .article-feature {
   width: 40vw;
   max-width: 36rem;
@@ -306,6 +312,7 @@ form span {
   font-size: 1.4rem;
   margin: 2rem auto;
   color: var(--highlight);
+  padding: 0;
 }
 #advertise-page li {
   display: inline;
@@ -316,6 +323,9 @@ form span {
 #advertise-page :last-child:after {
   content: "";
 }
+#advertise-page p {
+  text-align: center;
+}
 #contact-page {
   max-width: 40rem;
   margin: 0 auto;
@@ -325,6 +335,7 @@ form span {
   font-size: 1rem;
   line-height: 1rem;
   margin: 0;
+  text-justify: justify;
 }
 #contact-page h4, form {
   text-align: left;
@@ -369,6 +380,10 @@ form span {
 .current:hover {
   background: var(--on-bg2);
 }
+.dots {
+  color: var(--bg2);
+  background-color: var(--on-bg2); 
+}
 
 /*-- Media Queries --*/
 @media (max-width: 800px) {
@@ -394,22 +409,6 @@ form span {
   }
   h2 {
     display: none;
-  }
-  #recents {
-    flex-flow: column;
-  }
-  .recents-item {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-  }
-  .recents-title {
-    flex: 3;
-    text-align: left;
-  }
-  .thumbnail {
-    max-width: 50vw;
-    width: clamp(8rem, 5rem + 13vw, 12rem);
   }
   .details {
     margin-bottom: 0; 
