@@ -21,29 +21,37 @@
 
 <body>
 	<header>
-	  <a href="<?php echo home_url(); ?>" id="home">
-		<svg>
-		  <use xlink:href="#logo"></use>
-		</svg>
-		<h1><?php echo get_bloginfo('name'); ?></h1>
-	  </a>
-	  <h2><?php echo get_bloginfo('description'); ?></h2>
-	 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-	 <label for="openSidebarMenu" class="sidebarIconToggle">
-	   <div class="spinner diagonal part-1"></div>
-	   <div class="spinner horizontal"></div>
-	   <div class="spinner diagonal part-2"></div>
-	 </label>
-	 <div id="sidebarMenu">
-	 	<?php
-		 wp_nav_menu(
-			 array(
-				'menu' => 'primary',
-				'container' => '',
-				'theme_location' => 'primary',
-				'items_wrap' => '<ul class="sidebarMenuInner">%3$s</ul>'
-			 )
-		 );
-		 ?>
-	 </div>
+		<div id="menu">
+			<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+	 		<label for="openSidebarMenu" class="sidebarIconToggle">
+	   			<i class="fa-solid fa-bars fa-xl"></i>
+	 		</label>
+		 	<div id="sidebarMenu">
+			 	<?php
+			 	wp_nav_menu(
+				 	array(
+						'menu' => 'primary',
+						'container' => '',
+						'theme_location' => 'primary',
+						'items_wrap' => '<ul class="sidebarMenuInner">%3$s</ul>'
+				 	)
+			 	);
+			 	?>
+		 	</div>
+		 </div>
+		<div id="home" href="<?php echo home_url(); ?>" >
+			<svg>
+	  			<use xlink:href="#logo"></use>
+			</svg>
+			<h1><?php echo get_bloginfo('name'); ?></h1>
+  			<h2><?php echo get_bloginfo('description'); ?></h2>
+	  	</div>
+	 	<div class="search-icon" id="search-icon">
+		 	<i class="fa-solid fa-magnifying-glass fa-xl"></i>
+	 	</div>
 	</header>
+
+	<form role="search" method="get" id="search-form" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s" />
+		<button type="submit" class="search-submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+	</form>
