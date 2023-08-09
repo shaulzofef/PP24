@@ -44,7 +44,7 @@
 	  			<use xlink:href="#logo"></use>
 			</svg>
 			<h1><?php echo get_bloginfo('name'); ?></h1>
-  			<h2><?php echo get_bloginfo('description'); ?></h2>
+  			<!--<h2><?php echo get_bloginfo('description'); ?></h2>-->
 	  	</div>
 	 	<div class="search-icon" id="search-icon">
 		 	<i class="fa-solid fa-magnifying-glass fa-xl"></i>
@@ -53,5 +53,5 @@
 
 	<form role="search" method="get" id="search-form" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s" />
-		<button type="submit" class="search-submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+		<button type="submit" class="search-submit">GO</button>
 	</form>
