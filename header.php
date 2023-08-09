@@ -39,13 +39,13 @@
 			 	?>
 		 	</div>
 		 </div>
-		<div id="home" href="<?php echo home_url(); ?>" >
+		<a id="home" href="<?php echo home_url(); ?>" >
 			<svg>
 	  			<use xlink:href="#logo"></use>
 			</svg>
 			<h1><?php echo get_bloginfo('name'); ?></h1>
   			<!--<h2><?php echo get_bloginfo('description'); ?></h2>-->
-	  	</div>
+	  	</a>
 	 	<div class="search-icon" id="search-icon">
 		 	<i class="fa-solid fa-magnifying-glass fa-xl"></i>
 	 	</div>

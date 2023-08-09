@@ -10,7 +10,7 @@ html, body {
 #sidebarMenu {
     position: absolute;
     left: 0;
-    top: 6rem;
+    top: 5rem;
     padding: 1.5rem 2rem 1rem;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
