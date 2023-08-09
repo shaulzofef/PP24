@@ -171,22 +171,19 @@ nav a {
   color: var(--mid-blue);
   font-size: 1.1rem;
   text-align: center;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0;
+}
+.details i {
+  margin-right: .5rem;  
+}
+.details div {
+  display: inline;
+}
+.details div:first-child {
+  margin-right: 1rem;
 }
 
-/*-- icons --*/
-#date path, #author path, #arrow path, #down-arrow path, #home-icon path {
-  fill: var(--mid-blue);
-}
-.nav-home {
-  margin: 1rem auto;
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  text-align: center;
-  border: 1px solid var(--highlight);
-  border-radius: 1.3rem;
-}
+/*-- Logo --*/
 .circle {
   fill: var(--on-bg2);
 }

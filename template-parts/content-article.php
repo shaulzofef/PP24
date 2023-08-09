@@ -1,7 +1,7 @@
 <h3><?php the_title() ;?></h3>
 <div class="details">
-  <svg><use xlink:href="#author"></use></svg><?php echo get_the_author(); ?>
-  <svg><use xlink:href="#date"></use></svg>&nbsp;<?php the_time('F jS') ?>
+  <div><i class="fa-regular fa-user fa-xl"></i><?php echo get_the_author(); ?></div>
+  <div><i class="fa-regular fa-calendar fa-xl"></i><?php the_time('F jS') ?></div>
 </div>
 <div class="single-content">
 	<?php the_content(); ?>
