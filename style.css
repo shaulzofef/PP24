@@ -17,7 +17,7 @@ form, label, input {
 :root {
    --light-blue: #d2f2ff;
    --high-blue: #61d1ff;
-   --mid-blue: #0086be;
+   --mid-blue: #0074a4;
    --blue: #00314b;
    --dark-blue: #011e2d;
    --yellow: #FFDD00;
@@ -171,7 +171,7 @@ nav a {
   color: var(--mid-blue);
   font-size: 1.1rem;
   text-align: center;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 0;
 }
 .details i {
   margin-right: .5rem;  
