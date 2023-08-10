@@ -510,9 +510,6 @@ form span {
     display: block;    
     margin-bottom: 1rem; 
   }
-  .details {
-    margin-bottom: 0; 
-  }
   .button {
     margin-right: auto;
     margin-left: auto;
