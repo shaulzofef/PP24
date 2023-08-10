@@ -2,7 +2,15 @@
 	
 	<footer>
 		© <?php echo date("Y"); ?> O'Grady's PowerPage |
-		Powered by WordPress
+		Powered by WordPress<br>
+		
+		<a href="<?php get_home_url(); ?>/privacy-policy/">Privacy Policy</a> | 
+		<a href="<?php get_home_url(); ?>/terms-and-conditions">Terms & Conditions</a> | 
+		
+		<div id="social">
+			<a href="https://twitter.com/powerpage">@powerpage</a>
+			<a href="https://twitter.com/jasonogrady">@JasonOGrady</a>
+		</div>
 		
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967531003556587"
 			 crossorigin="anonymous"></script>

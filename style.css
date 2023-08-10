@@ -139,9 +139,13 @@ footer {
   margin-bottom: 2rem;
   text-align: center;
   color: var(--highlight);
+  opacity: 0.5;
 }
 footer svg {
   display: none;
+}
+footer a {
+  color: var(--highlight);
 }
 nav a {
   display: block;
@@ -237,22 +241,19 @@ svg {
 /*-- Recents --*/
 #recents {
   display: flex;
+  flex-flow: row wrap;
   gap: 1rem;
-  justify-content: space-between;
   margin-top: 1rem;
+}
+#recents a {
   font-size: 1.2rem;
   text-align: center;
 }
-#recents div {
+#recents > div {
   flex: 1;
-  max-width: 20rem;
+  min-width: 30%;
 }
-#recents img {
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
-}
-.recent-title {
+.recents-title {
   height: 5rem;
   margin-bottom: 1rem;
   font-family: 'Outfit', sans-serif;
@@ -264,6 +265,13 @@ svg {
 #recents :hover {
   color: var(--highlight);
 }
+.thumbnail {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 1rem;  
+  height: 8rem;
+}
+
 
 /*-- Images --*/
 
@@ -313,6 +321,15 @@ form span {
 }
 
 /*-- Pages --*/
+
+ol {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  color: var(--highlight);
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: left;  
+}
 #about-page section, #advertise-page section, #contact-page section {
   max-width: 40rem;
 }
@@ -493,6 +510,9 @@ form span {
 
 /*-- Media Queries --*/
 @media (max-width: 700px) {
+  #recents > div {
+    min-width: 40%;
+  }
   .flex-container {
 	  flex-direction: column;
   }
