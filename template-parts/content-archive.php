@@ -10,15 +10,4 @@
 	  	</a>
 	</div>
   <div class="seperator"></div>
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967531003556587"
-	   crossorigin="anonymous"></script>
-  <ins class="adsbygoogle"
-	   style="display:block"
-	   data-ad-format="fluid"
-	   data-ad-layout-key="-gw-3+1f-3d+2z"
-	   data-ad-client="ca-pub-1967531003556587"
-	   data-ad-slot="8911226544"></ins>
-  <script>
-	   (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+ 
