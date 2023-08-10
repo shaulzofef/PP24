@@ -1,8 +1,8 @@
 	<?php wp_footer();?>
 	
 	<footer>
-		© <script>document.write( new Date().getFullYear() );</script> O'Grady's PowerPage |
-		Powered by WordPress<br>
+		© <?php echo date("Y"); ?> O'Grady's PowerPage |
+		Powered by WordPress
 	  
 		<!-- Logo -->
 	  	<svg xmlns="http://www.w3.org/2000/svg">

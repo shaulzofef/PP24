@@ -21,23 +21,10 @@
 
 <body>
 	<header>
-		<div id="menu">
-			<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-	 		<label for="openSidebarMenu" class="sidebarIconToggle">
-	   			<i class="fa-solid fa-bars fa-xl"></i>
-	 		</label>
-		 	<div id="sidebarMenu">
-			 	<?php
-			 	wp_nav_menu(
-				 	array(
-						'menu' => 'primary',
-						'container' => '',
-						'theme_location' => 'primary',
-						'items_wrap' => '<ul class="sidebarMenuInner">%3$s</ul>'
-				 	)
-			 	);
-			 	?>
-		 	</div>
+		<div id="menu-container">
+			<div class="menu-icon" id="menu-icon">
+				 <i class="fa-solid fa-bars fa-xl"></i>
+			 </div>
 		 </div>
 		<a id="home" href="<?php echo home_url(); ?>" >
 			<svg>
@@ -50,8 +37,22 @@
 		 	<i class="fa-solid fa-magnifying-glass fa-xl"></i>
 	 	</div>
 	</header>
-
-	<form role="search" method="get" id="search-form" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s" />
-		<button type="submit" class="search-submit">GO</button>
-	</form>
+	<div id="popup-container">
+		<form role="search" method="get" id="search-form" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s" />
+			<button type="submit" class="search-submit">GO</button>
+		</form>
+		
+		<div id="menu" class="menu">
+ 			<?php
+ 			wp_nav_menu(
+	 			array(
+					'menu' => 'primary',
+					'container' => '',
+					'theme_location' => 'primary',
+					'items_wrap' => '<ul class="sidebarMenuInner">%3$s</ul>'
+	 			)
+ 			);
+ 			?>
+		</div>
+	</div>
