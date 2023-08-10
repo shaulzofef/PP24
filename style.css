@@ -135,9 +135,13 @@ section#single {
   max-width: 24rem;
 }
 footer {
-  margin: 0 auto 2rem 3rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--highlight);
+}
+footer svg {
+  display: none;
 }
 nav a {
   display: block;
@@ -171,7 +175,7 @@ nav a {
   color: var(--mid-blue);
   font-size: 1.1rem;
   text-align: center;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem;
 }
 .details i {
   margin-right: .5rem;  
