@@ -489,7 +489,7 @@ form span {
 }
 
 /*-- Media Queries --*/
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .flex-container {
 	flex-direction: column;
   }
