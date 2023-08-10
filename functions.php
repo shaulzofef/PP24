@@ -43,3 +43,6 @@ global $post;
 if (is_singular() && has_post_thumbnail() && ( $post->post_type == 'post' ) ) { the_post_thumbnail( 'medium', array( 'class' => 'article-feature' ) ); }
 return $content;
 }
+
+
+?>

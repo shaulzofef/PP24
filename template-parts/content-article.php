@@ -31,6 +31,3 @@
 		</div>
 	<?php endif; ?>
 </div>
-<a class="button home" onclick="history.back(-1)">
-	Home
-</a>

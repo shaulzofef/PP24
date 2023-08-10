@@ -17,8 +17,8 @@ form, label, input {
 :root {
    --light-blue: #d2f2ff;
    --high-blue: #61d1ff;
-   --mid-blue: #0074a4;
-   --dark-mid-blue: #00638c;
+   --mid-blue: #006894;
+   --dark-mid-blue: #005c82;
    --dark-blue: #00314b;
    --darker-blue: #011e2d;
    --darker-darker-blue: #011520;
@@ -213,7 +213,6 @@ svg {
   height: 2rem;
   line-height: 2rem;
   text-transform: uppercase;
-  margin: 0 auto;
   padding: 0 2rem;
   width: min-content;
   text-decoration: none;
@@ -368,14 +367,14 @@ form span {
     text-align: center;
     left: 0;
     top: 0;
-    padding: 1rem;
-    transform: translateX(-100%);
+    padding: .5rem;
+    transform: translateY(-100%);
     transition: transform 250ms ease-in-out;
     background: var(--popup);
     border-radius: 0 0 1rem 0;
 }
 #menu.active {
-    transform: translateX(0);  
+    transform: translateY(0);  
 }
 #menu ul {
   padding: 0;
@@ -411,18 +410,18 @@ form span {
   cursor: pointer;
 }
 .search-form {
-  transform: translateX(+100%);
+  transform: translateY(-100%);
   transition: transform .3s ease-in-out;
   background-color: var(--popup);
   text-align: center;
   position: absolute;
   right: 0;
   top: 0;
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 0 0 0 1rem;
 }
 .search-form.active {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 .search-form input, button {
   height: 2rem;
