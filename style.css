@@ -26,7 +26,6 @@ form, label, input {
    
    --bg1: var(--light-blue);
    --on-bg1: var(--dark-blue);
-   --popup: var(--dark-mid-blue);
    --bg2: var(--mid-blue);
    --on-bg2: var(--light-blue);
    --highlight: var(--mid-blue);
@@ -39,7 +38,6 @@ form, label, input {
    --bg2: var(--darker-blue);
    --on-bg2: var(--mid-blue);
    --highlight: var(--yellow);
-   --popup: var(--mid-blue);
   }
 }
 
@@ -180,6 +178,11 @@ nav a {
   font-size: 1.2rem;
   text-align: center;
   margin: 2rem 0;
+}
+@media (prefers-color-scheme: dark) {
+  .details {
+    color: var(--high-blue);
+  }
 }
 .details i {
   margin-right: .5rem;  
