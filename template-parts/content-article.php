@@ -13,7 +13,7 @@
 	$prev_post = get_previous_post();
 	 
 	if ( $next_post || $prev_post ) : ?>
-		<div class="next">
+		<div>
 			<?php if ( ! empty( $next_post ) ) : ?>
 				<a href="<?php echo get_permalink( $next_post ); ?>">
 					<?php echo get_the_post_thumbnail( $next_post); ?>
@@ -21,7 +21,7 @@
 				</a>
 			<?php endif; ?>
 		</div>
-		<div class="previous">
+		<div>
 			<?php if ( ! empty( $prev_post ) ) : ?>
 				<a href="<?php echo get_permalink( $prev_post ); ?>">
 					<?php echo get_the_post_thumbnail( $prev_post); ?>
