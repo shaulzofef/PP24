@@ -8,7 +8,7 @@
 			<?php the_excerpt(); ?>
   			<a class="button" href="<?php the_permalink(); ?>">Read</a>
 		</div>
-	  	<a href="">
+	  	<a href="<?php the_permalink(); ?>">
 			<img src="<?php the_post_thumbnail_url(); ?>" class="feature" alt="Feature Image">
 	  	</a>
 	</div>

@@ -470,9 +470,6 @@ form span {
 .page-numbers:hover {
   background: var(--on-bg1);  
 }
-.next, .prev {
-  padding: 0 1rem;
-}
 .current {
   text-align: center;
   background: var(--highlight);
