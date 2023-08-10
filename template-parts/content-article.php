@@ -1,8 +1,5 @@
 <h3><?php the_title() ;?></h3>
-<div class="details">
-  <div><i class="fa-regular fa-user fa-xl"></i><?php echo get_the_author(); ?></div>
-  <div><i class="fa-regular fa-calendar fa-xl"></i><?php the_time('F jS') ?></div>
-</div>
+<?php include "details.php"; ?>
 <div class="single-content">
 	<?php the_content(); ?>
 </div>

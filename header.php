@@ -3,8 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Daily Apple news and tips since 1995">
+  <?php
+  if (is_home() || is_front_page()) {
+	  $custom_home_description = 'Daily Apple news and tips since 1995';
+	  echo '<meta name="description" content="' . esc_attr($custom_home_description) . '">';
+  } elseif (is_singular()) {
+	  echo '<meta name="description" content="' . esc_attr(get_the_excerpt()) . '">';
+  } else {
+	  echo '<meta name="description" content="' . esc_attr('Daily Apple news and tips since 1995') . '">';
+  }
+  ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967531003556587"
+   crossorigin="anonymous"></script>
   
   <meta name="theme-color" content="#011e2d">
   <link rel="icon" href="/wp-content/themes/PP24/assets//wp-content/themes/PP24/assets/favicon/favicon.svg">

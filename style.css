@@ -17,8 +17,8 @@ form, label, input {
 :root {
    --light-blue: #d2f2ff;
    --high-blue: #61d1ff;
-   --mid-blue: #006894;
-   --dark-mid-blue: #005c82;
+   --mid-blue: #006d9c;
+   --dark-mid-blue: #005173;
    --dark-blue: #00314b;
    --darker-blue: #011e2d;
    --darker-darker-blue: #011520;
@@ -39,7 +39,7 @@ form, label, input {
    --bg2: var(--darker-blue);
    --on-bg2: var(--mid-blue);
    --highlight: var(--yellow);
-   --popup: var(--darker-darker-blue);
+   --popup: var(--mid-blue);
   }
 }
 
@@ -78,7 +78,7 @@ h1 {
   font-size: 3rem;
   line-height: 2rem;
   vertical-align: middle;
-  color: var(--on-bg2); 
+  color: var(--light-blue); 
   text-transform: uppercase; 
 }
 h2 {
@@ -92,7 +92,7 @@ h2 {
 h3 {
   color: var(--on-bg1);
   font-size: 1.7rem;
-  font-size:  clamp(1.7rem, 1.25rem + 2.25vw, 2.6rem);
+  font-size:  clamp(1.7rem, 0.8rem + 3vw, 2.3rem);
   line-height: 2rem;
   line-height: clamp(2rem, 1.55rem + 2.25vw, 2.9rem);
   font-family: 'Outfit', sans-serif;
@@ -173,9 +173,9 @@ nav a {
 }
 .details {
   color: var(--mid-blue);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
-  margin: 1rem 0 2rem;
+  margin: 2rem 0;
 }
 .details i {
   margin-right: .5rem;  
@@ -189,7 +189,7 @@ nav a {
 
 /*-- Logo --*/
 .circle {
-  fill: var(--on-bg2);
+  fill: var(--light-blue);
 }
 .background-bolt {
   fill: var(--darker-blue);
@@ -360,41 +360,44 @@ form span {
 /*-- Menu --*/
 #menu-icon i {
   margin: 0 0 0 1rem;
+  color: var(--light-blue);
   cursor: pointer;
 }
 #menu {
-    position: absolute;
-    text-align: center;
-    left: 0;
-    top: 0;
-    padding: .5rem;
-    transform: translateY(-100%);
-    transition: transform 250ms ease-in-out;
-    background: var(--popup);
-    border-radius: 0 0 1rem 0;
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
+  position: absolute;
+  text-align: center;
+  left: 0;
+  top: 0;
+  padding: .5rem;
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in-out;
+  background: var(--bg2);
+  border-radius: 0 0 1rem 0;
 }
 #menu.active {
-    transform: translateY(0);  
+  transform: translateY(0);  
 }
 #menu ul {
   padding: 0;
   margin: 0;
 }
 #menu li{
-    list-style: none;
-    color: var(--bg2);
-    text-transform: uppercase;
-    padding: .7rem;
-    cursor: pointer;
+  list-style: none;
+  padding: .5rem 1.2rem;
+  cursor: pointer;
 }
 #menu li:last-child {
   border-bottom: none;
 }
 #menu li a{
-    color: var(--on-bg2);
-    text-transform: uppercase;
-    cursor: pointer;
-    text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--light-blue);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
 }
 #menu li:hover a {
   color: var(--yellow);
@@ -406,13 +409,14 @@ form span {
   margin-right: 1rem;
 }
 .search-icon i {
-  color: var(--on-bg1);
+  color: var(--light-blue);
   cursor: pointer;
 }
 .search-form {
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
   transform: translateY(-100%);
   transition: transform .3s ease-in-out;
-  background-color: var(--popup);
+  background-color: var(--bg2);
   text-align: center;
   position: absolute;
   right: 0;
@@ -490,15 +494,15 @@ form span {
 /*-- Media Queries --*/
 @media (max-width: 700px) {
   .flex-container {
-	flex-direction: column;
+	  flex-direction: column;
   }
   .feature {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	max-height: 24rem;
-	margin: 0 auto;
-	display: block;
+	  width: 100%;
+	  max-width: 100%;
+	  height: auto;
+	  max-height: 24rem;
+	  margin: 0 auto;
+	  display: block;
   }
   .article-feature {
     width: 100%;
@@ -508,6 +512,9 @@ form span {
     margin: 0 auto;
     display: block;    
     margin-bottom: 1rem; 
+  }
+  .single-content img{
+    max-width: 100%;
   }
   .button {
     margin-right: auto;

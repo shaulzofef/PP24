@@ -38,10 +38,16 @@ add_action('wp_enqueue_scripts', 'sz_register_scripts');
 
 
 add_filter('the_content', 'put_thumbnail_in_posting');
+
 function put_thumbnail_in_posting($content) {
-global $post;
-if (is_singular() && has_post_thumbnail() && ( $post->post_type == 'post' ) ) { the_post_thumbnail( 'medium', array( 'class' => 'article-feature' ) ); }
-return $content;
+	global $post;
+	
+	if (is_singular() && has_post_thumbnail() && ($post->post_type == 'post')) {
+		$thumbnail = get_the_post_thumbnail($post, 'medium', array('class' => 'article-feature', 'alt' => get_the_title()));
+		$content = $thumbnail . $content;
+	}
+	
+	return $content;
 }
 
 

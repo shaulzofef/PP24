@@ -3,6 +3,19 @@
 	<footer>
 		© <?php echo date("Y"); ?> O'Grady's PowerPage |
 		Powered by WordPress
+		
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967531003556587"
+			 crossorigin="anonymous"></script>
+		<!-- Main -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-1967531003556587"
+			 data-ad-slot="8193304573"
+			 data-ad-format="auto"
+			 data-full-width-responsive="true"></ins>
+		<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 	  
 		<!-- Logo -->
 	  	<svg xmlns="http://www.w3.org/2000/svg">
