@@ -1,13 +1,12 @@
 	<?php wp_footer();?>
 	
 	<footer>
-		© <?php echo date("Y"); ?> O'Grady's&nbsp;PowerPage |
-		Powered&nbsp;by&nbsp;WordPress<br>
+		© <?php echo date("Y"); ?> O'Grady's&nbsp;PowerPage<br>
 		
 		<a href="<?php get_home_url(); ?>/privacy-policy/">Privacy Policy</a> | 
 		<a href="<?php get_home_url(); ?>/terms-and-conditions">Terms & Conditions</a> 
 		<div id="social">
-			<a href="https://twitter.com/powerpage">@pPowerPage</a> | 
+			<a href="https://twitter.com/powerpage">@PowerPage</a> | 
 			<a href="https://twitter.com/jasonogrady">@JasonOGrady</a>
 		</div>
 	  
