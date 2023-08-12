@@ -7,7 +7,10 @@ Author: Shaul Zofef
 */
 
 /*-- Resets --*/
-
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
 form, label, input {
   margin: 0;
   padding: 0;
@@ -197,6 +200,7 @@ nav a {
 svg {
   width: 3rem;
   height: 3rem;
+  vertical-align: middle;
 }
 
 /*-- Buttons --*/
@@ -309,6 +313,7 @@ textarea {
 	 border: none;
    margin: .5rem 0;
    width: 100%;
+   resize: vertical;
 }
 form span {
   color: var(--highlight);
