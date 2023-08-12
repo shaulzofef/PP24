@@ -1,17 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-	const searchIcon = document.getElementById('search-icon');
-	const searchForm = document.getElementById('search-form');
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButton = document.getElementById('menu-button');
+  const searchButton = document.getElementById('search-button');
+  const menu = document.getElementById('menu');
+  const searchBar = document.getElementById('search-bar');
 
-	searchIcon.addEventListener('click', () => {
-		searchForm.classList.toggle('active');
-	});
-});
+  menuButton.addEventListener('click', function() {
+	if (menu.style.transform === 'translateY(0%)') {
+	  menu.style.transform = 'translateY(-100%)';
+	} else {
+	  menu.style.transform = 'translateY(0%)';
+	  searchBar.style.transform = 'translateY(-100%)';
+	}
+  });
 
-document.addEventListener('DOMContentLoaded', function () {
-	const searchIcon = document.getElementById('menu-icon');
-	const searchForm = document.getElementById('menu');
-
-	searchIcon.addEventListener('click', () => {
-		searchForm.classList.toggle('active');
-	});
+  searchButton.addEventListener('click', function() {
+	if (searchBar.style.transform === 'translateY(0%)') {
+	  searchBar.style.transform = 'translateY(-100%)';
+	} else {
+	  searchBar.style.transform = 'translateY(0%)';
+	  menu.style.transform = 'translateY(-100%)';
+	}
+  });
 });

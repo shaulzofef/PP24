@@ -33,7 +33,7 @@
 <body>
 	<header>
 		<div id="menu-container">
-			<div class="menu-icon" id="menu-icon">
+			<div class="menu-button" id="menu-button">
 				 <i class="fa-solid fa-bars fa-xl"></i>
 			 </div>
 		 </div>
@@ -44,12 +44,12 @@
 			<h1><?php echo get_bloginfo('name'); ?></h1>
   			<!--<h2><?php echo get_bloginfo('description'); ?></h2>-->
 	  	</a>
-	 	<div class="search-icon" id="search-icon">
+	 	<div class="search-button" id="search-button">
 		 	<i class="fa-solid fa-magnifying-glass fa-xl"></i>
 	 	</div>
 	</header>
 	<div id="popup-container">
-		<form role="search" method="get" id="search-form" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<form role="search" method="get" id="search-bar" class="search-bar" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 			<input type="search" class="search-field" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s" />
 			<button type="submit" class="search-submit">GO</button>
 		</form>
