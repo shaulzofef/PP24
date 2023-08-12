@@ -403,13 +403,8 @@ ol {
   padding: .5rem;
   transform: translateY(-100%);
   transition: transform 250ms ease-in-out;
-  background: var(--light-mid-blue);
+  background: var(--mid-blue);
   border-radius: 0 0 1rem 0;
-}
-@media (prefers-color-scheme: dark) {
-  #menu {
-    background: var(--bg2);
-  }
 }
 #menu ul {
   padding: 0;
@@ -430,6 +425,7 @@ ol {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
+  color: var(--light-blue);
 }
 #menu li:hover a {
   color: var(--yellow);
@@ -454,7 +450,7 @@ ol {
   box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.4);
   transform: translateY(-100%);
   transition: transform .3s ease-in-out;
-  background-color: var(--bg2);
+  background-color: var(--mid-blue);
   text-align: center;
   position: absolute;
   right: 0;
