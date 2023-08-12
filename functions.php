@@ -50,5 +50,4 @@ function put_thumbnail_in_posting($content) {
 	return $content;
 }
 
-
 ?>

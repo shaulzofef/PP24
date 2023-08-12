@@ -16,6 +16,7 @@ form, label, input {
 
 :root {
    --light-blue: #d2f2ff;
+   --light-mid-blue: #BAE6FB;
    --high-blue: #61d1ff;
    --mid-blue: #0074ac;
    --dark-mid-blue: #005173;
@@ -114,7 +115,7 @@ header {
   position: relative;
   text-align: center;
   padding: 1.5rem 0 1rem;
-  background-color: color(display-p3 0.731 0.902 0.985);
+  background-color: var(--light-mid-blue);
   z-index: 1;
   viewport-fit: cover;
 }
@@ -402,8 +403,13 @@ ol {
   padding: .5rem;
   transform: translateY(-100%);
   transition: transform 250ms ease-in-out;
-  background: var(--bg2);
+  background: var(--light-mid-blue);
   border-radius: 0 0 1rem 0;
+}
+@media (prefers-color-scheme: dark) {
+  #menu {
+    background: var(--bg2);
+  }
 }
 #menu.active {
   transform: translateY(0);  
@@ -420,11 +426,10 @@ ol {
 #menu li:last-child {
   border-bottom: none;
 }
-#menu li a{
+#menu li a {
   font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
-  color: var(--light-blue);
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
@@ -432,7 +437,13 @@ ol {
 #menu li:hover a {
   color: var(--yellow);
 }
-
+.current-menu-item a, .current-menu-item a:hover {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: inherit!important;
+}
 
 /*-- Search --*/
 .search-icon {
@@ -475,6 +486,9 @@ ol {
   padding-left: 1rem;
   margin: 0;
 }
+.search-submit {
+  color: var(--dark-blue);
+}
 
 
 /*-- Pagination --*/
@@ -506,6 +520,7 @@ ol {
 }
 .next, .prev {
   padding: 0 1rem;
+  margin-bottom: 1rem;
 }
 .current {
   text-align: center;
