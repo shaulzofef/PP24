@@ -6,7 +6,7 @@
 		<a href="<?php get_home_url(); ?>/privacy-policy/">Privacy Policy</a> | 
 		<a href="<?php get_home_url(); ?>/terms-and-conditions">Terms & Conditions</a> 
 		<div id="social">
-			<a href="https://twitter.com/powerpage">@pPowerPage</a> | 
+			<a href="https://twitter.com/powerpage">@PowerPage</a> | 
 			<a href="https://twitter.com/jasonogrady">@JasonOGrady</a>
 		</div>
 	  
