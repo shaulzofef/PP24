@@ -31,23 +31,13 @@ form, label, input {
    --on-bg2: var(--light-blue);
    --highlight: var(--mid-blue);
    }
-   
-@media (prefers-color-scheme: dark) {
-  :root {
-   --bg1: var(--dark-blue);
-   --on-bg1: var(--light-blue);
-   --bg2: var(--darker-blue);
-   --on-bg2: var(--mid-blue);
-   --highlight: var(--yellow);
-  }
-}
 
 /*-- Main Styles --*/
 body {
   overflow-x: hidden;
   color: var(--on-bg1);
   background: var(--bg1);
-  font-family: 'Gantari', sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
   min-width: 350px;
 }
@@ -94,35 +84,28 @@ h3 {
   font-size:  clamp(1.7rem, 0.8rem + 3vw, 2.3rem);
   line-height: 2rem;
   line-height: clamp(2rem, 1.55rem + 2.25vw, 2.9rem);
-  font-family: 'Outfit', sans-serif;
   text-align: center;
   margin: 2rem auto 0;
 }
 h4 {
-  font-family: 'Outfit', sans-serif;
   font-size: 1.4rem;
   color: var(--highlight);
   margin-top: 1rem;
   margin-bottom: 0;
   text-align: center;
 }
-header {
+#header-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 1rem;
   position: relative;
   text-align: center;
   padding: 1.5rem 0 1rem;
   background-color: var(--light-mid-blue);
   z-index: 1;
-  viewport-fit: cover;
-}
-@media (prefers-color-scheme: dark) {
-  header {
-  background-color: var(--darker-blue);
-  }
 }
 main {
   margin: 0 auto;
@@ -156,13 +139,15 @@ nav a {
   color: var(--highlight);
   font-size: 1.3rem;
   font-style: italic;
-  font-family: 'Outfit', sans-serif;
   text-align: center;
   margin: 0 auto 2rem;
 }
 .flex-container {
   display: flex;
+  flex-direction: row;
   gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
 }
 .feature {
   width: 40vw;
@@ -185,11 +170,6 @@ nav a {
   font-size: clamp(1rem, 0.8rem + 1vw, 1.2rem);
   text-align: center;
   margin: 2rem 0;
-}
-@media (prefers-color-scheme: dark) {
-  .details {
-    color: var(--high-blue);
-  }
 }
 .details i {
   margin-right: .5rem;  
@@ -224,7 +204,6 @@ svg {
   display: block;
   background: var(--highlight);
   color: var(--bg1);
-  font-family: 'Outfit', sans-serif;
   font-size: 1.4rem;
   border-radius: 1rem;
   height: 2rem;
@@ -254,23 +233,25 @@ svg {
 /*-- Recents --*/
 #recents {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
 }
+
 #recents a {
   font-size: 1.2rem;
   text-align: center;
 }
 #recents > div {
   flex: 1;
+  width: 30%;
   max-width: 30%;
   min-width: 30%;
 }
 .recents-title {
   height: 5rem;
   margin-bottom: 1rem;
-  font-family: 'Outfit', sans-serif;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -337,7 +318,6 @@ form span {
 /*-- Pages --*/
 
 ol {
-  font-family: 'Outfit', sans-serif;
   font-size: 1.4rem;
   color: var(--highlight);
   margin-top: 1rem;
@@ -373,9 +353,8 @@ ol {
   margin: 0 auto;
 }
 #contact-page p {
-  font-family: 'Gantari', sans-serif;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   margin: 0;
   text-justify: justify;
 }
@@ -419,7 +398,6 @@ ol {
   border-bottom: none;
 }
 #menu li a {
-  font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: bold;
@@ -559,5 +537,21 @@ ol {
   .button {
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+   --bg1: var(--dark-blue);
+   --on-bg1: var(--light-blue);
+   --bg2: var(--darker-blue);
+   --on-bg2: var(--mid-blue);
+   --highlight: var(--yellow);
+  }
+  .details {
+    color: var(--high-blue);
+  }
+  #header-container {
+  background-color: var(--darker-blue);
   }
 }

@@ -1,6 +1,9 @@
+<!-- Author and Time Details -->
+
 <div class="details">
   <div><i class="fa-solid fa-circle-user fa-lg"></i><?php echo get_the_author(); ?></div>
   <div><i class="fa-solid fa-clock fa-lg"></i>
+  	<!-- If Post time is in the last day show relative time -->
   	<?php
 	  $post_date = get_the_date('Y-m-d');
 	  $current_date = date('Y-m-d');

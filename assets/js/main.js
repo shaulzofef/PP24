@@ -1,3 +1,5 @@
+// Menu and Search Bar Toggle functionality 
+
 document.addEventListener('DOMContentLoaded', function() {
   const menuButton = document.getElementById('menu-button');
   const searchButton = document.getElementById('search-button');

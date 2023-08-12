@@ -1,3 +1,5 @@
+<!-- Content for Archive Pages -->
+
  <a href="<?php the_permalink(); ?>"><h3><?php the_title() ;?></h3></a>
 	<?php include "details.php"; ?>
 	<div class="flex-container archive">
