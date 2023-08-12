@@ -17,7 +17,7 @@ form, label, input {
 :root {
    --light-blue: #d2f2ff;
    --high-blue: #61d1ff;
-   --mid-blue: #006d9c;
+   --mid-blue: #0074ac;
    --dark-mid-blue: #005173;
    --dark-blue: #00314b;
    --darker-blue: #011e2d;
@@ -76,7 +76,7 @@ h1 {
   font-size: 3rem;
   line-height: 2rem;
   vertical-align: middle;
-  color: var(--light-blue); 
+  color: var(--on-bg1); 
   text-transform: uppercase; 
 }
 h2 {
@@ -114,9 +114,14 @@ header {
   position: relative;
   text-align: center;
   padding: 1.5rem 0 1rem;
-  background-color: var(--bg2);
+  background-color: color(display-p3 0.731 0.902 0.985);
   z-index: 1;
   viewport-fit: cover;
+}
+@media (prefers-color-scheme: dark) {
+  header {
+  background-color: var(--darker-blue);
+  }
 }
 main {
   margin: 0 auto;
@@ -174,7 +179,7 @@ nav a {
   height: 1px;
 }
 .details {
-  color: var(--mid-blue);
+  color: var(--highlight);
   font-size: 1rem;
   font-size: clamp(1rem, 0.8rem + 1vw, 1.2rem);
   text-align: center;
@@ -197,7 +202,10 @@ nav a {
 
 /*-- Logo --*/
 .circle {
-  fill: var(--light-blue);
+  fill: var(--on-bg1);
+}
+.inner-circle {
+  fill: var(--mid-blue);
 }
 .background-bolt {
   fill: var(--darker-blue);
@@ -255,6 +263,7 @@ svg {
 }
 #recents > div {
   flex: 1;
+  max-width: 30%;
   min-width: 30%;
 }
 .recents-title {
@@ -381,7 +390,7 @@ ol {
 /*-- Menu --*/
 #menu-icon i {
   margin: 0 0 0 1rem;
-  color: var(--light-blue);
+  color: var(--on-bg1);
   cursor: pointer;
 }
 #menu {
@@ -430,7 +439,7 @@ ol {
   margin-right: 1rem;
 }
 .search-icon i {
-  color: var(--light-blue);
+  color: var(--on-bg1);
   cursor: pointer;
 }
 .search-form {
@@ -516,6 +525,7 @@ ol {
 @media (max-width: 700px) {
   #recents > div {
     min-width: 40%;
+    max-width: 50%;
   }
   .flex-container {
 	  flex-direction: column;
