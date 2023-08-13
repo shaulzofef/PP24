@@ -31,6 +31,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&family=Gantari:wght@200&family=Outfit&family=Teko:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
 
   <?php wp_head();?>
 </head>
@@ -49,7 +51,7 @@
 	  				<use xlink:href="#logo"></use>
 				</svg>
 				<h1><?php echo get_bloginfo('name'); ?></h1>
-  				<!--<h2><?php echo get_bloginfo('description'); ?></h2>-->
+  				<h2><?php echo get_bloginfo('description'); ?></h2>
 	  		</a>
  			<div class="search-button" id="search-button">
 	 			<i class="fa-solid fa-magnifying-glass fa-xl"></i>

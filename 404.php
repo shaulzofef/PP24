@@ -1,7 +1,7 @@
 <?php get_header();?>
 	<main>
 	  <section id="single">
-		  <h3>Page Not Found</h2>
+		  <h3>Page Not Found</h3>
 		  <a class="button home" href="<?php echo home_url(); ?>">
 			  Home
 		  </a>

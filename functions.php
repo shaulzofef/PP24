@@ -48,4 +48,10 @@ function put_thumbnail_in_posting($content) {
 	return $content;
 }
 
+function custom_excerpt_length($length) {
+	return 70; // Change this number to the desired length of words
+}
+add_filter('excerpt_length', 'custom_excerpt_length');
+
+
 ?>

@@ -56,12 +56,18 @@ a:hover h3 {
 }
 p {
   font-family: 'Crimson Pro', serif;
-  margin: 1rem auto;
+  margin: -.5rem auto 1rem;
   line-height: 2.2rem;
   text-align: left;
   font-size: 1.5rem;
   font-size: clamp(1.5rem, 1.3rem + 1vw, 1.7rem);
   justify-content: flex-start;
+}
+.archive p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;  
 }
 h1 {
   display: inline;
@@ -74,12 +80,12 @@ h1 {
   text-transform: uppercase; 
 }
 h2 {
-  color: var(--on-bg2);
+  display: none;
+  color: var(--bg2);
+  font-family: 'Courgette', cursive;
   font-size: 1rem;
   font-weight: normal;
-  font-style: italic;
   margin: 0;
-  
 }
 h3 {
   color: var(--on-bg1);
@@ -89,6 +95,7 @@ h3 {
   line-height: clamp(2rem, 1.55rem + 2.25vw, 2.9rem);
   text-align: center;
   margin: 2rem auto 0;
+  max-width: 50rem;
 }
 h4 {
   font-size: 1.4rem;
@@ -150,11 +157,11 @@ nav a {
   flex-direction: row;
   gap: 30px;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 .feature {
   width: 40vw;
-  max-width: 36rem;
+  max-width: 32rem;
   height: 100%;
   min-height: 18rem;
   object-fit: cover;
@@ -281,7 +288,7 @@ svg {
   object-fit: cover;
   border-radius: 1rem;
   float: right;
-  margin: 0 0 1rem 1rem;
+  margin: .5rem 0 1rem 1rem;
 }
 .passport {
   width: 140px;
@@ -558,5 +565,8 @@ ol {
   }
   #header-container {
   background-color: var(--darker-blue);
+  }
+  h2 {
+    color: var(--bg1);
   }
 }
