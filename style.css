@@ -362,7 +362,6 @@ ol {
 }
 #contact-page {
   max-width: 40rem;
-  max-width: 70vw;
   margin: 0 auto;
 }
 #contact-page p {
@@ -374,7 +373,9 @@ ol {
 #contact-page h4, form {
   text-align: left;
   font-size: 1rem;
+  max-width: 70vw;
 }
+
 
 /*-- popup container --*/
 #popup-container {
