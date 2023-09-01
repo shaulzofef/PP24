@@ -362,6 +362,7 @@ ol {
 }
 #contact-page {
   max-width: 40rem;
+  max-width: 80vw;
   margin: 0 auto;
 }
 #contact-page p {
