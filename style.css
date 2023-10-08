@@ -306,7 +306,7 @@ label {
 input {
   border-radius: 1rem;
   border: none;
-  padding: .5rem .5rem .5rem 1rem;
+  padding: .5rem;
   height: 1rem;
   max-width: 18rem;
 }
@@ -314,7 +314,7 @@ textarea {
    border-radius: 1rem;
    border: none;
    width: 85%;
-   padding: .5rem .5rem .5rem 1rem;
+   padding: .5rem;
    resize: vertical;
 }
 form span {
