@@ -294,31 +294,6 @@ svg {
   border-radius: 1rem;
   margin: 1rem 0 1rem 1rem;
 }
-/*-- Forms --*/
-#contact-page form {
-  margin: 0 auto;
-  text-align: center;
-}
-#contact-page label {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  display: block;
-}
-#contact-page input {
-  margin-top: 1rem;
-  border-radius: 1rem;
-  border: none;
-  padding: .5rem 0;
-  height: 1rem;
-  width: 100%;
-}
-#contact-page textarea {
-   border-radius: 1rem;
-   border: none;
-   padding: .5rem 0;
-   resize: vertical;
-   width: 100%;
-}
 
 /*-- Pages --*/
 
@@ -369,6 +344,29 @@ ol {
 #contact-page h4 {
   font-size: 1rem; 
   margin: 2rem auto 1rem; 
+}
+#contact-page label {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  display: block;
+}
+#contact-page input#name, #contact-page input#contact {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: none;
+  padding: .5rem 0;
+  height: 1rem;
+  width: 100%;
+}
+#contact-page input.button {
+  border: none;
+}
+#contact-page textarea {
+   border-radius: 1rem;
+   border: none;
+   padding: .5rem 0;
+   resize: vertical;
+   width: 100%;
 }
 #contact-page form {
   text-align: left;
@@ -483,7 +481,7 @@ section#notes {
   background: var(--yellow);
 }
 .search-bar button:hover {
-  background: var(--on-bg1);  
+  background: var(--light-mid-blue); 
 }
 .search-bar input {
   padding-left: 1rem;
@@ -572,6 +570,7 @@ section#notes {
   .button {
     margin-right: auto;
     margin-left: auto;
+    border: none;
   }
 }
 
