@@ -304,21 +304,19 @@ label {
   display: block;
 }
 input {
+  margin-top: 1rem;
   border-radius: 1rem;
   border: none;
-  padding: .5 0rem;
+  padding: .5rem 0;
   height: 1rem;
-  width: 85%;
+  width: 100%;
 }
 textarea {
    border-radius: 1rem;
    border: none;
-   width: 85%;
    padding: .5rem 0;
    resize: vertical;
-}
-form span {
-  margin-top: .5rem;
+   width: 100%;
 }
 
 /*-- Pages --*/
@@ -358,7 +356,7 @@ ol {
   text-align: center;
 }
 #contact-page {
-  max-width: 40rem;
+  max-width: 30rem;
   margin: 0 auto;
 }
 #contact-page p {
