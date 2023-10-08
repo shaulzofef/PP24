@@ -306,15 +306,15 @@ label {
 input {
   border-radius: 1rem;
   border: none;
-  padding: .5rem;
+  padding: .5 0rem;
   height: 1rem;
-  max-width: 18rem;
+  width: 85%;
 }
 textarea {
    border-radius: 1rem;
    border: none;
    width: 85%;
-   padding: .5rem;
+   padding: .5rem 0;
    resize: vertical;
 }
 form span {
