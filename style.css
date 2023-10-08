@@ -19,7 +19,7 @@ form, label, input {
 
 :root {
    --light-blue: #d2f2ff;
-   --light-mid-blue: #BAE6FB;
+   --light-mid-blue: #88cdee;
    --high-blue: #61d1ff;
    --mid-blue: #0074ac;
    --dark-mid-blue: #005173;
@@ -60,7 +60,6 @@ p {
   line-height: 2.2rem;
   text-align: left;
   font-size: 1.5rem;
-  font-size: clamp(1.5rem, 1.3rem + 1vw, 1.7rem);
   justify-content: flex-start;
 }
 .archive p {
@@ -89,19 +88,16 @@ h2 {
 }
 h3 {
   color: var(--on-bg1);
-  font-size: 1.7rem;
-  font-size:  clamp(1.7rem, 0.8rem + 3vw, 2.3rem);
-  line-height: 2rem;
-  line-height: clamp(2rem, 1.55rem + 2.25vw, 2.9rem);
+  font-size: 2.1rem;
+  line-height: 2.6rem;
   text-align: center;
-  margin: 2rem auto 0;
+  margin: 2rem auto 1rem;
   max-width: 50rem;
 }
 h4 {
   font-size: 1.4rem;
   color: var(--highlight);
-  margin-top: 1rem;
-  margin-bottom: 0;
+  margin: 0 auto 2rem;
   text-align: center;
 }
 #header-container {
@@ -308,22 +304,22 @@ label {
   display: block;
 }
 input {
-  border-radius: .7rem;
+  border-radius: 1rem;
   border: none;
-  margin: 1rem 0 .5rem;
-  padding: .5rem;
+  margin: .5rem 0 .5rem;
+  padding: .5rem .5rem .5rem 1rem;
   height: 1rem;
   max-width: 18rem;
 }
 textarea {
-   border-radius: .7rem;
-	 border: none;
+   border-radius: 1rem;
+   border: none;
    margin: .5rem 0;
    width: 100%;
+   padding: .5rem .5rem .5rem 1rem;
    resize: vertical;
 }
 form span {
-  color: var(--highlight);
   margin-left: .5rem;
 }
 
@@ -338,6 +334,9 @@ ol {
 }
 #about-page section, #advertise-page section, #contact-page section {
   max-width: 40rem;
+}
+#advertise-page h4 {
+  margin: 2rem auto 1rem;
 }
 #advertise-page ul{
   list-style: none;
@@ -370,10 +369,27 @@ ol {
   margin: 0;
   text-justify: justify;
 }
-#contact-page h4, form {
+#contact-page h4 {
+  font-size: 1rem; 
+  margin: 2rem auto 1rem; 
+}
+#contact-page form {
   text-align: left;
   font-size: 1rem;
   max-width: 100%;
+}
+section#notes {
+  margin-top: 3rem; 
+}
+#notes p {
+  margin: .2rem auto 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  opacity: .5;
+  text-align: center;
+}
+#notes span{
+  color: var(--highlight);
 }
 
 
@@ -411,7 +427,7 @@ ol {
 #menu li:last-child {
   border-bottom: none;
 }
-#menu li a {
+#menu li > * {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: bold;
@@ -427,7 +443,6 @@ ol {
   pointer-events: none;
   cursor: default;
   text-decoration: none;
-  color: inherit!important;
 }
 
 /*-- Search --*/
