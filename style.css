@@ -50,6 +50,7 @@ a {
 }
 a#home {
   text-decoration: none;
+  margin-top: .5rem;
 }
 a:hover h3 {
   color: var(--highlight);
@@ -109,7 +110,7 @@ h4 {
   gap: 1rem;
   position: relative;
   text-align: center;
-  padding: 1.5rem 0 1rem;
+  padding: 1rem 0;
   background-color: var(--light-mid-blue);
   z-index: 1;
 }
