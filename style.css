@@ -295,16 +295,16 @@ svg {
   margin: 1rem 0 1rem 1rem;
 }
 /*-- Forms --*/
-form {
+#contact-page form {
   margin: 0 auto;
   text-align: center;
 }
-label {
+#contact-page label {
   font-size: 1.2rem;
   margin-top: 1rem;
   display: block;
 }
-input {
+#contact-page input {
   margin-top: 1rem;
   border-radius: 1rem;
   border: none;
@@ -312,7 +312,7 @@ input {
   height: 1rem;
   width: 100%;
 }
-textarea {
+#contact-page textarea {
    border-radius: 1rem;
    border: none;
    padding: .5rem 0;
