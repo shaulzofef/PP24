@@ -15,14 +15,19 @@
   }
   ?>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/releases/v6.5.1/js/all.js"></script>
+  <link href="/wp-content/themes/PP24/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/wp-content/themes/PP24/assets/fontawesome/css/solid.css" rel="stylesheet">
+
   <!-- Google Ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1967531003556587"
    crossorigin="anonymous"></script>
   
   <!-- Theme Color and Icons -->
   <meta name="theme-color" content="#011e2d">
-  <link rel="icon" href="/wp-content/themes/PP24/assets//wp-content/themes/PP24/assets/favicon/favicon.svg">
+  <link rel="icon" href="/wp-content/themes/PP24/assets/favicon/favicon.svg">
   <link rel="mask-icon" href="/wp-content/themes/PP24/assets/favicon/mask-icon.svg" color="#011e2d">
   <link rel="apple-touch-icon" href="/wp-content/themes/PP24/assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/wp-content/themes/PP24/assets/favicon/site.webmanifest.json">
