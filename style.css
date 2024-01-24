@@ -58,21 +58,20 @@ a:hover h3 {
 p {
   font-family: 'Crimson Pro', serif;
   margin: -.5rem auto 1rem;
-  line-height: 36px;
+  line-height: 38px;
   text-align: left;
   font-size: 1.5rem;
   justify-content: flex-start;
 }
 .excerpt-content {
-  height: 288px;
+  height: 304px;
   overflow: hidden; /* Initially hide overflow */
   transition: height 0.3s ease, overflow 0.3s ease; /* Smooth transition */
 }
 
 .full-article-content {
-  display: none; /* Initially hidden */
+  display: none; 
 }
-
 h1 {
   display: inline;
   font-family: 'Teko', sans-serif;
@@ -212,22 +211,34 @@ svg {
 }
 
 /*-- Buttons --*/
-.button {
+.buttonWrapper {
   display: inline;
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+  z-index: 1;  
+  width: 90px;
+  height: 38px;
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(90deg, transparent, var(--bg1) 40px);
+}
+.button {
   background: var(--highlight);
   color: var(--bg1);
   font-size: 1.2rem;
-  border-radius: 13px;
-  height: 26px;
-  line-height: 26px;
+  border-radius: 14px;
+  height: 28px;
+  line-height: 28px;
   text-transform: uppercase;
   padding: 0 15px;
   width: min-content;
   text-decoration: none;
-  position: absolute;
-  right: 0;
-  bottom: 8px;
-  z-index: 1;
+  align-self: flex-end;
+  vertical-align: center;
+}
+.expanded {
+  line-height: 24px;
 }
 .excerpt-content {
   position: relative;
@@ -577,11 +588,6 @@ section#notes {
   }
   .single-content img{
     max-width: 100%;
-  }
-  .button {
-    margin-right: auto;
-    margin-left: auto;
-    border: none;
   }
 }
 

@@ -1,15 +1,3 @@
-// Check if the next title is in the viewport 
-function isInViewport(element) {
-  var rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-
 document.addEventListener('DOMContentLoaded', function() {
   var readMoreButtons = document.querySelectorAll('.read-more-button');
 
@@ -33,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
           excerptContent.style.height = 'auto';
         }, 500);
 
+        // Add the 'expanded' class to the button
+        this.classList.add('expanded');
+
         this.textContent = '-';
       } else {
         // Get current full height before setting to specific value
@@ -41,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Transition to the specific height and then to zero
         excerptContent.style.height = currentFullHeight + 'px';
         setTimeout(() => {
-          excerptContent.style.height = '288px';
+          excerptContent.style.height = '304px';
         }, 10); // Small timeout
 
         // Set fullArticleContent to be hidden after the transition
@@ -49,22 +40,28 @@ document.addEventListener('DOMContentLoaded', function() {
           fullArticleContent.style.display = 'none';
         }, 300);
 
+        // Remove the 'expanded' class from the button
+        this.classList.remove('expanded');
+
         this.textContent = '+';
 
-        // Set a small timeout to allow the collapse transition to complete
-        setTimeout(() => {
-          // Find the next <h3> directly
-          var nextTitle = this.nextElementSibling;
+        // Scroll to the next articleTitle after collapsing
+        setTimeout(() => {   
+          var nextArticleTitle = button.closest('.flex-container').parentNode.nextElementSibling.querySelector('.articleTitle');
 
-          // Check if the next title is not in the viewport
-          if (nextTitle && !isInViewport(nextTitle)) {
-            nextTitle.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          // Check if the next articleTitle element exists before scrolling
+          if (nextArticleTitle) {
+            var headerHeight = 50; 
+            var offset = nextArticleTitle.offsetTop - headerHeight;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          } else {
           }
-        }, 300); // Adjust timeout as needed to match the collapse transition
+        }, 350);
       }
     });
   });
 });
+
 
 
 
