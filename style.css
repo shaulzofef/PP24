@@ -18,7 +18,7 @@ form, label, input {
 /*-- Color Variables --*/
 
 :root {
-   --light-blue: #d2f2ff;
+   --light-blue: #e4f7ff;
    --light-mid-blue: #88cdee;
    --high-blue: #61d1ff;
    --mid-blue: #0074ac;
@@ -28,7 +28,7 @@ form, label, input {
    --darker-darker-blue: #011520;
    --yellow: #FFDD00;
    
-   --bg1: var(--light-blue);
+   --bg1: white;
    --on-bg1: var(--dark-blue);
    --bg2: var(--mid-blue);
    --on-bg2: var(--light-blue);
@@ -57,14 +57,17 @@ a:hover h3 {
 }
 p {
   font-family: 'Crimson Pro', serif;
-  margin: -.5rem auto 1rem;
-  line-height: 38px;
+  margin: -5px auto 25px;
+  line-height: 37px;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   justify-content: flex-start;
 }
+p:last-child {
+  margin-bottom: 0;
+}
 .excerpt-content {
-  height: 304px;
+  height: 288px;
   overflow: hidden; /* Initially hide overflow */
   transition: height 0.3s ease, overflow 0.3s ease; /* Smooth transition */
 }
@@ -92,10 +95,10 @@ h2 {
 }
 h3 {
   color: var(--on-bg1);
-  font-size: 2.1rem;
-  line-height: 2.6rem;
+  font-size: 1.7rem;
+  line-height: 2.4rem;
   text-align: center;
-  margin: 2rem auto 1rem;
+  margin: 2rem auto 0;
   max-width: 50rem;
 }
 h4 {
@@ -114,7 +117,7 @@ h4 {
   position: relative;
   text-align: center;
   padding: 1rem 0;
-  background-color: var(--light-mid-blue);
+  background: var(--bg1);
   z-index: 1;
 }
 main {
@@ -133,7 +136,7 @@ section#single {
 }
 footer {
   padding: 0 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 50px;
   text-align: center;
   color: var(--highlight);
   opacity: 0.5;
@@ -171,13 +174,16 @@ nav a {
 .seperator {
   background: linear-gradient(90deg, transparent 0%, var(--high-blue) 50%, transparent 100% );
   width: 90%;
-  margin: 2rem auto 0;
   height: 1px;
+  margin: 0 auto;
+}
+section .seperator {
+  margin: 20px auto 0;
 }
 .details {
   color: var(--highlight);
   font-size: 1rem;
-  font-size: clamp(1rem, 0.8rem + 1vw, 1.2rem);
+  font-size: clamp(1.05rem, 0.8rem + 1vw, 1.15rem);
   text-align: center;
   margin: 2rem 0;
 }
@@ -204,10 +210,13 @@ nav a {
 .bolt {
   fill: var(--yellow);
 }
-svg {
+header svg {
   width: 3rem;
   height: 3rem;
   vertical-align: middle;
+}
+.details svg {
+  margin-right: 7px;
 }
 
 /*-- Buttons --*/
@@ -215,7 +224,7 @@ svg {
   display: inline;
   position: absolute;
   right: 0;
-  bottom: 13px;
+  bottom: 0;
   z-index: 1;  
   width: 90px;
   height: 38px;
@@ -237,11 +246,22 @@ svg {
   align-self: flex-end;
   vertical-align: center;
 }
+.buttonWrapper * {
+  font-size: 1.5rem;
+}
 .expanded {
+  position: relative;
+  float: right;
+}
+.expanded .button {
   line-height: 24px;
 }
 .excerpt-content {
   position: relative;
+}
+.post-excerpt {
+  width: 100%;
+  box-sizing: border-box;
 }
 .submit {
   position: relative;
@@ -249,9 +269,6 @@ svg {
   top: .2rem;
   margin: 1rem auto;
   cursor: pointer;
-}
-.button:hover, .submit-button:hover {
-  background: var(--on-bg1);
 }
 .home {
   margin: 2rem auto 0;
@@ -424,8 +441,10 @@ section#notes {
   position: relative;
 }
 /*-- Menu --*/
+#menu-button {
+  margin-left: 10px;
+}
 #menu-button i {
-  margin: 0 0 0 1rem;
   color: var(--on-bg1);
   cursor: pointer;
 }
@@ -473,7 +492,7 @@ section#notes {
 
 /*-- Search --*/
 .search-button {
-  margin-right: 1rem;
+  margin-right: 10px;
 }
 .search-button i {
   color: var(--on-bg1);
@@ -501,13 +520,11 @@ section#notes {
   padding: .5rem 1rem;
   display: inline-block;
   background: var(--yellow);
-}
-.search-bar button:hover {
-  background: var(--light-mid-blue); 
+  cursor: pointer;
 }
 .search-bar input {
   padding-left: 1rem;
-  margin: 0;
+  margin: 0 5px 0;
 }
 .search-submit {
   color: var(--dark-blue);
@@ -523,7 +540,7 @@ section#notes {
 }
 .nav-links > * {
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: normal;
 }
 .nav-links > a {
@@ -533,17 +550,14 @@ section#notes {
 .page-numbers {
   background: var(--highlight);
   margin: 0 .2rem;
-  padding: 0 .2rem;
+  padding: 1px 3px 0;
   border-radius: 1rem;
   min-width: 2rem;
   width: min-content;
   text-transform: uppercase;
-}
-.page-numbers:hover {
-  background: var(--on-bg1);  
+  height: 28px;
 }
 .next, .prev {
-  padding: 0 1rem;
   margin-bottom: 1rem;
 }
 .current {
@@ -551,9 +565,6 @@ section#notes {
   background: var(--highlight);
   opacity: 0.5; 
   color: var(--bg1);
-}
-.current:hover {
-  background: var(--on-bg2);
 }
 .dots {
   color: var(--bg2);
@@ -601,9 +612,6 @@ section#notes {
   }
   .details {
     color: var(--high-blue);
-  }
-  #header-container {
-  background-color: var(--darker-blue);
   }
   h2 {
     color: var(--bg1);

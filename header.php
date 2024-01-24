@@ -82,5 +82,6 @@
 				<button type="submit" class="search-submit">GO</button>
 			</form>
 		</div>
+		<div class="seperator"></div>
 	</header>
 	

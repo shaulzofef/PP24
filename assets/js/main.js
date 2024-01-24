@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var excerptContent = this.closest('.post-excerpt').querySelector('.excerpt-content');
       var fullArticleContent = excerptContent.querySelector('.full-article-content');
-
+      var buttonWrapper = this.parentNode;
+      
       if (this.textContent.trim() === '+') {
         // Show the full article content
         fullArticleContent.style.display = 'block';
@@ -21,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
           excerptContent.style.height = 'auto';
         }, 500);
 
-        // Add the 'expanded' class to the button
-        this.classList.add('expanded');
+        // Add the 'expanded' class to the buttonWrapper
+        buttonWrapper.classList.add('expanded');
 
         this.textContent = '-';
       } else {
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Transition to the specific height and then to zero
         excerptContent.style.height = currentFullHeight + 'px';
         setTimeout(() => {
-          excerptContent.style.height = '304px';
+          excerptContent.style.height = '288px';
         }, 10); // Small timeout
 
         // Set fullArticleContent to be hidden after the transition
@@ -40,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
           fullArticleContent.style.display = 'none';
         }, 300);
 
-        // Remove the 'expanded' class from the button
-        this.classList.remove('expanded');
+        // Remove the 'expanded' class from the buttonWrapper
+        buttonWrapper.classList.remove('expanded');
 
         this.textContent = '+';
 
@@ -51,8 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           // Check if the next articleTitle element exists before scrolling
           if (nextArticleTitle) {
-            var headerHeight = 50; 
-            var offset = nextArticleTitle.offsetTop - headerHeight;
+            var offset = nextArticleTitle.offsetTop;
             window.scrollTo({ top: offset, behavior: 'smooth' });
           } else {
           }
